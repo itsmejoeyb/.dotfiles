@@ -7,31 +7,33 @@ return {
     vim.g.loaded_netrw = 1
     vim.g.loaded_netrwPlugin = 1
 
-    nvimtree.setup({
-     view = {
-       width = 30,
-       side = "left",
-       auto_resize = true,
-       relativenumber = true,
-     },
-     renderer = {
-      indent_markers = {
-        enabled = true,
+   nvimtree.setup({
+      view = {
+        width = 35,
+        relativenumber = true,
       },
-     },
-     actions = {
-      open_file = {
-        window_picker = {
-          enable = false,
+      -- change folder arrow icons
+      renderer = {
+        indent_markers = {
+          enable = true,
         },
       },
-     },
-     filters = {
-      custom = { ".DS_Store" },
-     },
-     git = {
-      ignore = false,
-     },
+      -- disable window_picker for
+      -- explorer to work well with
+      -- window splits
+      actions = {
+        open_file = {
+          window_picker = {
+            enable = false,
+          },
+        },
+      },
+      filters = {
+        custom = { ".DS_Store" },
+      },
+      git = {
+        ignore = false,
+      },
     })
 
     local keymap = vim.keymap
