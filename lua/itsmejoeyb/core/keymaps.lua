@@ -8,7 +8,7 @@ local keymap = vim.keymap -- for conciseness
 
 -- use ctrl + o or leader + e to open netrw
 -- keymap.set("n", "<leader>e", ":Explore<CR>", { desc = "Open netrw" })
-keymap.set("n", "<C-o>", ":Explore<CR>", { desc = "Open netrw" })
+-- keymap.set("n", "<C-o>", ":Explore<CR>", { desc = "Open netrw" })
 
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
@@ -24,8 +24,8 @@ keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- incremen
 keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
 
 -- buffer navigation
-keymap.set("n", "H", ":bprevious<CR>", { desc = "Previous buffer" })
-keymap.set("n", "L", ":bnext<CR>", { desc = "Next buffer" })
+keymap.set("n", "H", "<cmd>bprevious<CR>", { desc = "Previous buffer" })
+keymap.set("n", "L", "<cmd>bnext<CR>", { desc = "Next buffer" })
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
