@@ -3,17 +3,11 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
----------------------
--- General Keymaps -------------------
+-- General Keymaps 
 
 -- use ctrl + o or leader + e to open netrw
-<<<<<<< HEAD
 keymap.set("n", "<leader>e", ":Explore<CR>", { desc = "Open netrw" })
 keymap.set("n", "<C-o>", ":Explore<CR>", { desc = "Open netrw" })
-=======
--- keymap.set("n", "<leader>e", ":Explore<CR>", { desc = "Open netrw" })
--- keymap.set("n", "<C-o>", ":Explore<CR>", { desc = "Open netrw" })
->>>>>>> 4f79e87e6d73da8ad45b389cce6a45b08ec92dc6
 
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
@@ -29,13 +23,8 @@ keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- incremen
 keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement
 
 -- buffer navigation
-<<<<<<< HEAD
 keymap.set("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Previous buffer" })
 keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer" })
-=======
-keymap.set("n", "H", "<cmd>bprevious<CR>", { desc = "Previous buffer" })
-keymap.set("n", "L", "<cmd>bnext<CR>", { desc = "Next buffer" })
->>>>>>> 4f79e87e6d73da8ad45b389cce6a45b08ec92dc6
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
