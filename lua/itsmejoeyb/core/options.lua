@@ -3,6 +3,7 @@ local opt = vim.opt -- for conciseness
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
+opt.scrolloff = 8 -- minimum number of lines to keep above and below cursor
 
 -- tabs & indentation
 opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
@@ -32,7 +33,7 @@ opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 
 -- clipboard
-opt.clipboard:append { 'unnamed', 'unnamedplus' } -- use system clipboard as default register
+opt.clipboard:append({ "unnamed", "unnamedplus" }) -- use system clipboard as default register
 
 -- split windows
 opt.splitright = true -- split vertical window to the right
@@ -44,3 +45,9 @@ opt.swapfile = false
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
+
+opt.smartindent = true
+
+if vim.fn.has("nvim-0.10") == 1 then
+	opt.smoothscroll = true
+end
